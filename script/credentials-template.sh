@@ -1,0 +1,10 @@
+export SR_URL=https://xxxx.confluent.cloud
+export SR_API_KEY=yyyy
+export SR_API_SECRET=zzzz
+export KEY_VAULT_KEY_ID=https://gggg.vault.azure.net/keys/csfle-test/jjjj
+export CLIENT_ID=rrrr
+export CLIENT_SECRET=bbbb
+export AZURE_TENANT=hhhh
+export KEY_ID=oooo
+export KEY_VAULT_NAME=mmmm
+export KEY_NAME=aaaa

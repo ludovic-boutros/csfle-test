@@ -1,0 +1,20 @@
+{
+  "name": "datagen-csfle",
+  "config": {
+    "connector.class": "io.confluent.kafka.connect.datagen.DatagenConnector",
+    "name": "datagen-csfle",
+    "kafka.topic": "customers",
+    "output.data.format": "AVRO",
+    "schema.string": "{\n  \"fields\": [\n    {\n      \"name\": \"firstname\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"name\",\n      \"type\": \"string\"\n    },\n    {\n      \"name\": \"email\",\n      \"type\": \"string\",\n      \"confluent:tags\": [ \"PII\"]\n    },\n    {\n      \"name\": \"age\",\n      \"type\": \"int\"\n    }\n  ],\n  \"name\": \"Customer\",\n  \"namespace\": \"io.confluent.demo.csfle.model\",\n  \"type\": \"record\"\n}",
+    "tasks.max": "1",
+    "value.converter": "io.confluent.connect.avro.AvroConverter",
+    "value.converter.schema.registry.url": "https://yyyy.confluent.cloud",
+    "value.converter.basic.auth.credentials.source": "USER_INFO",
+    "value.converter.schema.registry.basic.auth.user.info": "SR_KEY:SR_SECRET",
+    "value.converter.auto.register.schemas": "false",
+    "value.converter.use.latest.version": "true",
+    "value.converter.rule.executors._default_.param.tenant.id": "AZURE_TENANT",
+    "value.converter.rule.executors._default_.param.client.id": "gggg",
+    "value.converter.rule.executors._default_.param.client.secret": "hhhh"
+  }
+}

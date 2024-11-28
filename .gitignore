@@ -1,0 +1,7 @@
+.idea
+target
+script/credentials.sh
+src/main/resources/consumer-client.properties
+src/main/resources/producer-client.properties
+kafka-connect/ccloud-connect-distributed.properties
+kafka-connect/datagen.json
