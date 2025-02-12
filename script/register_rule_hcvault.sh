@@ -17,9 +17,9 @@ curl --request POST --url "$SR_URL/subjects/customers-value/versions"   \
             "mode": "WRITEREAD",
             "tags": ["PII"],
             "params": {
-               "encrypt.kek.name": "test-csfle",
-               "encrypt.kms.key.id": "'"${KEY_VAULT_KEY_ID}"'",
-               "encrypt.kms.type": "azure-kms"
+               "encrypt.kek.name": "kafka",
+               "encrypt.kms.key.id": "http://127.0.0.1:8200/transit/keys/kafka",
+               "encrypt.kms.type": "hcvault"
               },
             "onFailure": "ERROR,NONE"
           }

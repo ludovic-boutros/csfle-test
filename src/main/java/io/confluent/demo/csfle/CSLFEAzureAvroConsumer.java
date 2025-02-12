@@ -17,9 +17,9 @@ import java.util.Properties;
 
 public class CSLFEAzureAvroConsumer {
 
-    private static Logger log = LoggerFactory.getLogger(CSLFEAzureAvroConsumer.class);
+    private static final Logger log = LoggerFactory.getLogger(CSLFEAzureAvroConsumer.class);
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         Properties consumerProps = loadProperties("src/main/resources/consumer-client.properties");
         consumerProps.setProperty(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
         consumerProps.setProperty(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, KafkaAvroDeserializer.class.getName());
@@ -37,7 +37,7 @@ public class CSLFEAzureAvroConsumer {
     }
 
 
-    public static Properties loadProperties(String filePath) throws IOException {
+    public static Properties loadProperties(String filePath) {
         Properties properties = new Properties();
 
         try {

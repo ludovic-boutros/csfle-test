@@ -16,9 +16,9 @@ import java.util.UUID;
 
 public class CSFLEAzureAvroProducer {
 
-    private static Logger log = LoggerFactory.getLogger(CSFLEAzureAvroProducer.class);
+    private static final Logger log = LoggerFactory.getLogger(CSFLEAzureAvroProducer.class);
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         Properties producerProps = loadProperties("src/main/resources/producer-client.properties");
         producerProps.setProperty(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
         producerProps.setProperty(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, KafkaAvroSerializer.class.getName());
@@ -33,7 +33,7 @@ public class CSFLEAzureAvroProducer {
                     Customer.newBuilder()
                             .setFirstname(String.format("Walter-%d", i))
                             .setName(String.format("Johnson-%d", i))
-                            .setAge(34+i)
+                            .setAge(34 + i)
                             .setEmail(String.format("walter%d@johnson.com", i))
                             .build()
             ));
@@ -45,7 +45,7 @@ public class CSFLEAzureAvroProducer {
 
     }
 
-    public static Properties loadProperties(String filePath) throws IOException {
+    public static Properties loadProperties(String filePath) {
         Properties properties = new Properties();
 
         try {
