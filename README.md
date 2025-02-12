@@ -48,3 +48,10 @@ To main runnable classes can be used:
 
 1. [CSFLEAzureAvroProducer.java](src/main/java/io/confluent/demo/csfle/CSFLEAzureAvroProducer.java)
 2. [CSFLEAzureAvroConsumer.java](src/main/java/io/confluent/demo/csfle/CSLFEAzureAvroConsumer.java)
+
+# Sequence Diagram
+
+The following sequence diagram shows the flow of a client application encryption / decryption process.
+It is not fully accurate but gives a good idea of the process.
+
+![Sequence Diagram](images/sequence-diagram.png)
